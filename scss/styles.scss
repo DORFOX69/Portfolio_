@@ -1,0 +1,108 @@
+@import 'variables';
+@import 'animations';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    background-color: $background-color;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: $primary-color;
+    padding: $spacing;
+    color: white;
+    text-align: center;
+    
+    nav {
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            
+            li {
+                display: inline-block;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+                padding: 10px;
+                transition: background-color 0.3s;
+                
+                &:hover {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+}
+
+section {
+    padding: $spacing;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing;
+}
+
+.skill {
+    background-color: $primary-color;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: $spacing;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: $spacing;
+}
